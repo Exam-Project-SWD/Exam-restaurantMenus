@@ -6,9 +6,12 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 import io.github.cdimascio.dotenv.Dotenv;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 public class DatabaseConnection {
+    private static Logger logger =  LogManager.getLogger(DatabaseConnection.class);
     Dotenv dotenv = Dotenv.load();
     ConnectionString connectionString = new ConnectionString(dotenv.get("mongoConnectionString"));
     MongoClient mongoClient = MongoClients.create(connectionString);
@@ -18,6 +21,7 @@ public class DatabaseConnection {
             db = mongoClient.getDatabase("mtogo");
         } catch(MongoException me) {
             System.err.println(me);
+            logger.error(me);
         }
         return db;
     }

@@ -1,0 +1,23 @@
+<Configuration status="debug" name="restmenu" packages="">
+    <Appenders>
+        <File name="fout" fileName="restaurantmenu.log" append="true">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n</Pattern>
+            </PatternLayout>
+        </File>
+        <File name="stdout" fileName="restaurantmenuapi.log" append="true">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %m%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Root level="INFO">
+        <AppenderRef ref="stdout" />
+        <AppenderRef ref="fout"/>
+    </Root>
+    <Loggers>
+        <Root level="error">
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+    </Loggers>
+</Configuration>
