@@ -1,4 +1,4 @@
-<Configuration status="debug" name="restmenu" packages="">
+<Configuration>
     <Appenders>
         <File name="fout" fileName="restaurantmenu.log" append="true">
             <PatternLayout>
@@ -11,13 +11,12 @@
             </PatternLayout>
         </File>
     </Appenders>
-    <Root level="INFO">
-        <AppenderRef ref="stdout" />
-        <AppenderRef ref="fout"/>
-    </Root>
     <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="fout"/>
+        </Root>
         <Root level="error">
-            <AppenderRef ref="STDOUT"/>
+            <AppenderRef ref="stdout"/>
         </Root>
     </Loggers>
 </Configuration>

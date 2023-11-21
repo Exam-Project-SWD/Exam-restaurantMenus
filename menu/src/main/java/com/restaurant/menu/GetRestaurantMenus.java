@@ -4,6 +4,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,11 +15,11 @@ import org.apache.logging.log4j.Logger;
 
 
 @RestController
-@RequestMapping(path = "api")
+@RequestMapping(path = "api", produces = MediaType.APPLICATION_JSON_VALUE)
 public class GetRestaurantMenus {
-    private static Logger logger =  LogManager.getLogger(DatabaseConnection.class);
+    private static Logger logger =  LogManager.getLogger(GetRestaurantMenus.class);
     @GetMapping("/menus")
-    public List getMenus(){
+    public List<String> getMenus(){
         DatabaseConnection conn = new DatabaseConnection();
         MongoDatabase db = conn.getConnection();
         List<String> menus = new ArrayList<>();
