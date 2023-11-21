@@ -11,11 +11,10 @@
     </Appenders>
 
     <Loggers>
-        <Root level="INFO">
-            <AppenderRef ref="InfoAppender" />
+        <Root level="debug">
+            <AppenderRef ref="InfoAppender" level="info" />
+            <AppenderRef ref="FileAppender" level="error" />
         </Root>
-        <Logger name="com.restaurant.menu" level="ERROR">
-            <AppenderRef ref="FileAppender" />
-        </Logger>
+
     </Loggers>
 </Configuration>
