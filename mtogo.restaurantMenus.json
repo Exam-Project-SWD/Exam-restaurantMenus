@@ -1,0 +1,78 @@
+[{
+  "_id": {
+    "$oid": "65562a00e59a2c0108e09821"
+  },
+  "restaurantName": "Burger King",
+  "food": [
+    {
+      "name": "Whopper",
+      "price": 75
+    },
+    {
+      "name": "Cheese burger",
+      "price": 15
+    }
+  ],
+  "drinks": [
+    {
+      "name": "Cola",
+      "price": 20
+    },
+    {
+      "name": "fanta",
+      "price": 20
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "655a3ff0d05083cdf9c40a3b"
+  },
+  "restaurantName": "Mc Donalds",
+  "food": [
+    {
+      "name": "Big Mac",
+      "price": 85
+    },
+    {
+      "name": "Nuggets",
+      "price": 60
+    }
+  ],
+  "drinks": [
+    {
+      "name": "Milkshake",
+      "price": 20
+    },
+    {
+      "name": "Mc Coffee",
+      "price": 15
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "655a3ff0d05083cdf9c40a3c"
+  },
+  "restaurantName": "Grillen",
+  "food": [
+    {
+      "name": "Poelsemix",
+      "price": 55
+    },
+    {
+      "name": "Hot Dog",
+      "price": 35
+    }
+  ],
+  "drinks": [
+    {
+      "name": "Cocio",
+      "price": 25
+    },
+    {
+      "name": "Pepsi",
+      "price": 20
+    }
+  ]
+}]
