@@ -4,7 +4,7 @@ This repository is for finding all menus in a mongodb and returning them as a li
 ## Requirements
 This requires a mongodb-community-edition docker container and the connection string in a .env file and the data which is the .json file in repo
 
-## How to start
+## How to start mongodb docker and import data
 
 ```
 docker pull mongodb/mongodb-community-server
