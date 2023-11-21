@@ -10,4 +10,5 @@ This requires a mongodb-community-edition docker container and the connection st
 docker pull mongodb/mongodb-community-server
 docker run --name mongodb -d -p 8000:27017 mongodb/mongodb-community-server:latest
 ```
-You can now open mongodb compas and import the .json file to get some data
+You can now open mongodb compas and import the .json file to get some data.
+You might need to make a database called `mtogo` and a collection called `restaurantMenus` before you can import the data.
