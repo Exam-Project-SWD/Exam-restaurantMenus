@@ -18,6 +18,8 @@ import org.apache.logging.log4j.Logger;
 @RequestMapping(path = "api", produces = MediaType.APPLICATION_JSON_VALUE)
 public class GetRestaurantMenus {
     private static Logger logger =  LogManager.getLogger(GetRestaurantMenus.class);
+
+    // this api endpoint returns all the restaurant menus from the database
     @GetMapping("/menus")
     public List<String> getMenus(){
         DatabaseConnection conn = new DatabaseConnection();

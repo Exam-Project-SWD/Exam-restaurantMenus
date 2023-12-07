@@ -9,7 +9,8 @@ import io.github.cdimascio.dotenv.Dotenv;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
+// database connection class to connect to mongodb
+// it uses a logger to log errors and it uses dotenv to load the connection string from .env file
 public class DatabaseConnection {
     private static Logger logger =  LogManager.getLogger(DatabaseConnection.class);
     Dotenv dotenv = Dotenv.load();
