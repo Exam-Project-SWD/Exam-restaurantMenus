@@ -20,6 +20,7 @@ class RestaurantMenuIT {
         dbconn.closeConnection();
     }
 
+    // this test checks if the database connection is successful
     @Test
     void getConnectionTest(){
 
@@ -27,6 +28,7 @@ class RestaurantMenuIT {
         assertNotNull(db);
     }
 
+    // this test checks if the database returns some (not empty) menus
     @Test
     void getMenusIntegrationTest(){
         GetRestaurantMenus grm = new GetRestaurantMenus();
