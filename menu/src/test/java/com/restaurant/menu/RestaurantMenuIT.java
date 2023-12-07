@@ -22,7 +22,7 @@ class RestaurantMenuIT {
 
     // this test checks if the database connection is successful
     @Test
-    void getConnectionTest(){
+    void getConnection_isNotNullTest(){
 
         MongoDatabase db = dbconn.getConnection();
         assertNotNull(db);
@@ -30,7 +30,7 @@ class RestaurantMenuIT {
 
     // this test checks if the database returns some (not empty) menus
     @Test
-    void getMenusIntegrationTest(){
+    void getMenus_isNotEmptyIntegrationTest(){
         GetRestaurantMenus grm = new GetRestaurantMenus();
         List<String> menus = grm.getMenus();
         assertFalse(menus.isEmpty());
